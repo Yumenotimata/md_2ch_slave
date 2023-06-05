@@ -8,11 +8,14 @@ void pic_init(void)
     clock_init();
     pin_init();
     pwm_init();
+    //msi_init();
 }
+
 
 void clock_init(void)
 {
-    CLKDIVbits.PLLPRE = 1;
+    
+     CLKDIVbits.PLLPRE = 1;
     PLLFBDbits.PLLFBDIV = 100;
     PLLDIVbits.POST1DIV = 4;
     PLLDIVbits.POST2DIV = 1;
@@ -24,6 +27,9 @@ void clock_init(void)
 
 void pin_init(void)
 {
+    ////
+    TRISC = 0;
+    //////
     TRISCbits.TRISC10 = 0;
     TRISCbits.TRISC11 = 0;
     TRISCbits.TRISC4 = 0;

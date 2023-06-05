@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c pwm.c md_2ch_slave.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c pwm.c pic.c msi.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/md_2ch_slave.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/pwm.o.d ${OBJECTDIR}/md_2ch_slave.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/pic.o ${OBJECTDIR}/msi.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/pwm.o.d ${OBJECTDIR}/pic.o.d ${OBJECTDIR}/msi.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/md_2ch_slave.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/pic.o ${OBJECTDIR}/msi.o
 
 # Source Files
-SOURCEFILES=main.c pwm.c md_2ch_slave.c
+SOURCEFILES=main.c pwm.c pic.c msi.c
 
 
 
@@ -107,11 +107,17 @@ ${OBJECTDIR}/pwm.o: pwm.c  .generated_files/flags/default/e0662636adc56d80b49572
 	@${RM} ${OBJECTDIR}/pwm.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  pwm.c  -o ${OBJECTDIR}/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pwm.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/md_2ch_slave.o: md_2ch_slave.c  .generated_files/flags/default/3cdded40f473f6f7bb4831de939ba92ce6391a40 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/pic.o: pic.c  .generated_files/flags/default/f689b7f0e638b02a0cb44c278c926b016d5cd9e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/md_2ch_slave.o.d 
-	@${RM} ${OBJECTDIR}/md_2ch_slave.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  md_2ch_slave.c  -o ${OBJECTDIR}/md_2ch_slave.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/md_2ch_slave.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/pic.o.d 
+	@${RM} ${OBJECTDIR}/pic.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  pic.c  -o ${OBJECTDIR}/pic.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pic.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/msi.o: msi.c  .generated_files/flags/default/6475c70301678ce32f9aba70f5ebef2494aea2b8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/msi.o.d 
+	@${RM} ${OBJECTDIR}/msi.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  msi.c  -o ${OBJECTDIR}/msi.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/msi.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
 ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/2b4e75c0cdc8251e096c7383d13dc9574a378d66 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
@@ -126,11 +132,17 @@ ${OBJECTDIR}/pwm.o: pwm.c  .generated_files/flags/default/71dae02304feaee09d0bbf
 	@${RM} ${OBJECTDIR}/pwm.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  pwm.c  -o ${OBJECTDIR}/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pwm.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/md_2ch_slave.o: md_2ch_slave.c  .generated_files/flags/default/a05776e6d84594f47743d7abde8ed8661091dc6a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/pic.o: pic.c  .generated_files/flags/default/73970fd1771e1c05ad263d59a9067ea6c5490f32 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/md_2ch_slave.o.d 
-	@${RM} ${OBJECTDIR}/md_2ch_slave.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  md_2ch_slave.c  -o ${OBJECTDIR}/md_2ch_slave.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/md_2ch_slave.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/pic.o.d 
+	@${RM} ${OBJECTDIR}/pic.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  pic.c  -o ${OBJECTDIR}/pic.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pic.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/msi.o: msi.c  .generated_files/flags/default/bae53df8e64717a770cd7729c60a49567e794eed .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/msi.o.d 
+	@${RM} ${OBJECTDIR}/msi.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  msi.c  -o ${OBJECTDIR}/msi.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/msi.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
