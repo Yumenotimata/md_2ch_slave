@@ -1,5 +1,6 @@
 #include "pic.h"
 #include "msi.h"
+#include "uart.h"
 
 #define _XTAL_FREQ 180000000
 #define FCY _XTAL_FREQ/2
@@ -91,11 +92,17 @@ void _ISR _MSIDTInterrupt(void)
 void main(void)
 {
     pic_init();
-    INTCON2bits.GIE = 1;
-
+    
+    
+    
     //uint16_t duty = 4500; 
+    TRISCbits.TRISC13 = 0;
     while(1)
     {
+        LATCbits.LATC13 = 1;
+        __delay_ms(200);
+        uart1_write(0x55);
+        uart1_write(0x55);
       //  __delay_ms(500);
       // fifo_push(0x55);
 //        if(IFS8bits.MSIDTIF == 1)
